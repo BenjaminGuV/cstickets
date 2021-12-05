@@ -61,6 +61,7 @@
                 `name` VARCHAR(200) NULL DEFAULT '',
                 `precio` DECIMAL(10, 2) NULL DEFAULT 0.00,
                 `status` TINYINT(1) NULL DEFAULT 0,
+                `fid_$table_name` INT(11) NULL DEFAULT 0,
                 PRIMARY KEY  (`id_$table_name_products`)
         ) $charset_collate;";
 
@@ -77,8 +78,11 @@
                 `id_$table_name_tickets_products` INT NOT NULL AUTO_INCREMENT,
                 `code` VARCHAR(200) NULL DEFAULT '',
                 `name` VARCHAR(200) NULL DEFAULT '',
-                `precio` DECIMAL(10, 2) NULL DEFAULT 0.00,
+                `cant` INT(11) NULL DEFAULT 0,
+                `precioxone` DECIMAL(10, 2) NULL DEFAULT 0.00,
+                `precioxtotal` DECIMAL(10, 2) NULL DEFAULT 0.00,
                 `status` TINYINT(1) NULL DEFAULT 0,
+                `fid_tickets_products` INT(11) NULL DEFAULT 0,
                 PRIMARY KEY  (`id_$table_name_tickets_products`)
         ) $charset_collate;";
 
