@@ -81,6 +81,8 @@ if ( !function_exists( 'csts_cstickets_callback_scripts' ) ) {
     wp_enqueue_style( 'select2' );
     wp_register_style( 'namespace', $url_newmoji . "/css/cstickets.css" );
     wp_enqueue_style( 'namespace' );
+    wp_register_style( 'maincstickets', $url_newmoji . "/css/cstickets-main.css" );
+    wp_enqueue_style( 'maincstickets' );
     wp_enqueue_script( 'namespaceformyscriptselect2', $url_newmoji . "/js/select2.js", array(), false, true );
     wp_enqueue_script( 'namespaceformyscript', $url_newmoji . "/js/cstickets.js", array(), false, true );
     wp_enqueue_script( 'namespaceformyscriptdos', $url_newmoji . "/js/main.js", array(), false, true );
@@ -111,6 +113,16 @@ if ( !function_exists( 'csts_cstickets_callback_scripts' ) ) {
 
   }
 }
+
+
+if ( !function_exists( 'csts_cstickets_output_pdf' ) ) {
+  function csts_cstickets_output_pdf()
+  {
+    header("Content-type: application/pdf"); // add here more headers for diff. extensions
+    header("Content-Disposition: attachment; filename=\"".$path_parts["basename"]."\""); // use 'attachment' to force a download
+  }
+}
+
 
 
 // calls AJAX

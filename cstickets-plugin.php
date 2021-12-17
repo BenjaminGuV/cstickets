@@ -34,6 +34,8 @@ add_action( 'the_content', 'csts_cstickets_print_html' );
 //install tables
 register_activation_hook(__FILE__, 'csts_cstickets_installer');
 
+//WP create pdf
+add_action( 'wp', 'csts_cstickets_output_pdf' );
 
 // Hook para usuarios logueados
 add_action('wp_ajax_save_cstickets_ajax', 'csts_cstickets_save_ajax');
