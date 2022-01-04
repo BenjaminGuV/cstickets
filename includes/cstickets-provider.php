@@ -173,22 +173,26 @@
     </div>
     <div class="wrap">
         
-        <form method="post" action="<?php echo $path_includes_page_admin; ?>">
-            <div class="mb-3">
+        <form id="form-s-providers" method="post" action="<?php echo $path_includes_page_admin; ?>">
+            <div class="form-group mb-3">
                 <label class="form-label">Nombre</label>
                 <input type="text" name="name_provider" id="name_provider" class="form-control">
+                <div class="mb-12 messages"></div>
             </div>
-            <div class="mb-3">
+            <div class="form-group mb-3">
                 <label class="form-label">Nombre comercial</label>
                 <input type="text" name="name_commercial_provider" id="name_commercial_provider" class="form-control">
+                <div class="mb-12 messages"></div>
             </div>
-            <div class="mb-3">
+            <div class="form-group mb-3">
                 <label class="form-label">RFC</label>
                 <input type="text" name="rfc_provider" id="rfc_provider" class="form-control">
+                <div class="mb-12 messages"></div>
             </div>
-            <div class="mb-3">
+            <div class="form-group mb-3">
                 <label class="form-label">Dirección</label>
                 <textarea name="direction" id="direction" class="form-control" cols="30" rows="10"></textarea>
+                <div class="mb-12 messages"></div>
             </div>
             
             <div class="group-form">

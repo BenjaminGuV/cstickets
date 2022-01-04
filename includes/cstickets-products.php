@@ -175,7 +175,7 @@
     ?>
         <div class="wrap">
             <h1>Creación de productos</h1>
-            <form method="post" action="<?php echo $path_includes_page_admin; ?>">
+            <form id="form-s-products" method="post" action="<?php echo $path_includes_page_admin; ?>">
                 <div class="mb-3">
                     <label class="form-label">Proveedor</label>
                     <select class="form-control">

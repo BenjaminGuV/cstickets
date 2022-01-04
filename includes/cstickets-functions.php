@@ -83,9 +83,15 @@ if ( !function_exists( 'csts_cstickets_callback_scripts' ) ) {
     wp_enqueue_style( 'namespace' );
     wp_register_style( 'maincstickets', $url_newmoji . "/css/cstickets-main.css" );
     wp_enqueue_style( 'maincstickets' );
+    wp_enqueue_script( 'validatejs', $url_newmoji . "/js/libs/validate.min.js", array(), false, true );
+    wp_enqueue_script( 'validation', $url_newmoji . "/js/validation.js", array(), false, true );
+    wp_enqueue_script( 'underscorejs', $url_newmoji . "/js/libs/underscore-min.js", array(), false, true );
     wp_enqueue_script( 'namespaceformyscriptselect2', $url_newmoji . "/js/select2.js", array(), false, true );
     wp_enqueue_script( 'namespaceformyscript', $url_newmoji . "/js/cstickets.js", array(), false, true );
     wp_enqueue_script( 'namespaceformyscriptdos', $url_newmoji . "/js/main.js", array(), false, true );
+
+    wp_enqueue_script( 'namespaceformyscriptprovider', $url_newmoji . "/js/proveedor.js", array(), false, true );
+
 
     wp_localize_script( 
       'namespaceformyscriptdos', 
@@ -104,12 +110,48 @@ if ( !function_exists( 'csts_cstickets_callback_scripts' ) ) {
     );
 
     wp_localize_script( 
+      'validatejs', 
+      'localize_vars', 
+      array( 
+        'url' => site_url('/')
+      ) 
+    );
+
+    wp_localize_script( 
+      'validation', 
+      'localize_vars', 
+      array( 
+        'url' => site_url('/')
+      ) 
+    );
+
+    wp_localize_script( 
+      'underscorejs', 
+      'localize_vars', 
+      array( 
+        'url' => site_url('/')
+      ) 
+    );
+
+    wp_localize_script( 
       'namespaceformyscriptdos', 
       'localize_vars', 
       array( 
         'url' => site_url('/')
       ) 
     );
+
+    
+    wp_localize_script( 
+      'namespaceformyscriptprovider', 
+      'localize_vars', 
+      array( 
+        'url' => site_url('/')
+      ) 
+    );
+
+
+    
 
   }
 }
